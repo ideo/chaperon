@@ -206,6 +206,7 @@ defmodule Chaperon.Action.HTTP do
     opts = [
       cookie: session.cookies,
       basic_auth: session.config[:basic_auth],
+      recv_timeout: session.config[:http_timeout],
       pool: :chaperon
     ]
 
